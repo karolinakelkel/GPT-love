@@ -14,4 +14,4 @@ class Settings(pydantic_settings.BaseSettings):
     OPENAI_API_KEY: str
 
     class Config:
-        env_file = join(dirname(dirname(__file__)), ".env")
+        env_file = join(dirname(dirname(dirname(__file__))), ".env")

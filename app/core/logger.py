@@ -8,7 +8,7 @@ DEFAULT_FORMATTER = 'default'
 DETAILED_FORMATTER = 'detailed'
 DEFAULT_FORMAT = '[%(asctime)s] %(levelname)s %(name)s - %(message)s'
 DETAILED_FORMAT = '[%(asctime)s] %(levelname)s %(name)s in %(pathname)s:%(lineno)d - %(message)s'
-LOG_HANDLERS = ['console', 'file']
+LOG_HANDLERS = ['console'] if settings.DEBUG else ['console', 'file']
 UVICORN_LOGGER_CONFIG = {'level': settings.LOG_LEVEL,
                          'handlers': LOG_HANDLERS,
                          'propagate': False}
